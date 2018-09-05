@@ -12,16 +12,16 @@
   transform-origin: 50% 100px;
 }
 .circle .point-wrapper .point {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: #ffc966;
   display: flex;
   align-items: center;
   justify-content: center;
   animation: inherit;
   animation-name: spin-reverse;
   animation-direction: reverse;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ffc966;
 }
 @keyframes spin {
   to {
