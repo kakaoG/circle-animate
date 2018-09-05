@@ -1,0 +1,39 @@
+.circle(@size, @bgColor) {
+  width: @size;
+  height: @size;
+  border-radius: 50%;
+  background-color: @bgColor;
+}
+
+.circle {
+  display: flex;
+  justify-content: center;
+  margin: 200px auto;
+  .circle(200px, lighten(yellow, 20%));
+  .point-wrapper {
+    animation: spin 3s infinite linear;
+    transform-origin: 50% 100px;
+    .point {
+      .circle(40px, lighten(orange, 20%));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: inherit;
+      animation-name: spin-reverse;
+      animation-direction: reverse;
+    }
+  }
+
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(1turn)
+  }
+}
+
+@keyframes spin-reverse {
+  to {
+    transform: rotate(1turn)
+  }
+}
